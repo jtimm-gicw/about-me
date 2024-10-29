@@ -1,0 +1,17 @@
+* {
+   background-color: lightblue;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   -webkit-font-smoothing: antialiased;
+   padding: 5px;
+   margin: 5px;
+}
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+h2 {
+    color:rgba(88, 87, 87, 0.973);
+}
+div {
+   
+}
