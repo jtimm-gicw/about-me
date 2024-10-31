@@ -1,8 +1,8 @@
 * {
    background-color: lightblue;
    font-family: Georgia, 'Times New Roman', Times, serif;
-   -webkit-font-smoothing: antialiased;
-   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased; /* need these for every page*/
+   text-rendering: optimizeLegibility; /* need these for every page*/
    margin: 0;
    
 }
@@ -41,6 +41,17 @@ a {
     background-color: white;
     padding: 5px 60px;
 }
+ol {
+    list-style-type: decimal;
+}
 ul, ul li, ol, ol li {
     background-color: white;
+    line-height: 1.6;
+    font-size: 14px;
+}
+ul {
+    list-style-type: square;
+}
+ul li::marker {
+    color: blue;
 }
