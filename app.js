@@ -1,6 +1,6 @@
 `use strict`
 //Welcome user
-let user = prompt('What is your name?');
+/*let user = prompt('What is your name?');
 
 alert ('Hi, ' + user + '.' + ' Welcome to my site!');
 
