@@ -19,3 +19,6 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 ### Reflections and Comments
 
 * I am feeling more comfortable with html, css, and basic js.
+
+-Qilin was here
+I was a drvier on Jason's repo
