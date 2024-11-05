@@ -55,3 +55,30 @@ ul {
 ul li::marker {
     color: blue;
 }
+
+div h2{
+    padding: 20px;
+}
+
+li strong {
+    background: white;
+}
+
+
+
+/* ol .top-10-list li:nth-child(1) {
+    color: darkgreen;
+ }
+ 
+ */
+
+
+/* .top-10-list li:nth-child(2),
+.top-10-list li:nth-child(3),
+.top-10-list li:nth-child(4) {
+  */
+}
+/* footer {
+    padding: 0px;
+
+} */
