@@ -1,70 +1,200 @@
-* {
-   background-color: lightblue;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   -webkit-font-smoothing: antialiased; /* need these for every page*/
-   text-rendering: optimizeLegibility; /* need these for every page*/
-   margin: 0;
-   
-}
-body {
-    background: white;
-    margin: 10px;
-}
-h1 {
-    text-align: center;
-    font-size: 3em;
-    margin: 0 0 20px 0;
-}
-h2 {
-    color:rgba(88, 87, 87, 0.973);
-    background: white;
-    padding: 10px 10px 0px 10px;
-}
-.container {
-   width: 600px;
-   background-color: white;
-   border: dotted 2px blue;
-   justify-content: center;
-   margin: 10px auto;
-   padding: 20px;
-   border-radius: 25px;
+/* =====================================
+   GLOBAL RESET & BASE STYLES
+   ===================================== */
 
-   
+/* Apply consistent box sizing and reset spacing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /* Typography smoothing for better readability */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    /* Global font choice */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-p { 
-    background-color: white;
+
+/* Page background */
+body {
+    background-color: lightblue;
     padding: 10px;
-    line-height: 1.6;
-    font-size: 14px;
 }
-a {
+
+/* =====================================
+   MAIN LAYOUT USING CSS GRID
+   ===================================== */
+
+/*
+   The main element becomes a grid container.
+   - One column on mobile
+   - Centered content with consistent spacing
+*/
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; /* Space between sections */
+    justify-items: center;
+}
+
+/* =====================================
+   HERO / HEADER SECTION
+   ===================================== */
+
+.hero {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Circular profile image */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes image circular */
+    border: 4px solid white;
+}
+
+/* Main page title */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* =====================================
+   CONTENT CONTAINERS
+   ===================================== */
+
+/*
+   Each .container is a "card"
+   Grid keeps everything aligned and centered
+*/
+.container {
     background-color: white;
-    padding: 5px 60px;
+    width: 100%;
+    max-width: 650px; /* Prevents overly wide text */
+    padding: 25px;
+    border-radius: 25px;
+    border: 2px dotted blue;
+
+    /* Grid inside each container */
+    display: grid;
+    gap: 10px;
 }
+
+/* Section headings */
+h2 {
+    color: rgba(88, 87, 87, 0.97);
+}
+
+/* Paragraph text */
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =====================================
+   LIST STYLING
+   ===================================== */
+
+ul,
 ol {
-    list-style-type: decimal;
-}
-ul, ul li, ol, ol li {
-    background-color: white;
-    line-height: 1.6;
+    margin-left: 20px;
     font-size: 14px;
+    line-height: 1.6;
 }
+
+/* Square bullets for unordered lists */
 ul {
     list-style-type: square;
 }
+
+/* Change bullet color */
 ul li::marker {
     color: blue;
 }
 
-div h2{
-    padding: 20px;
+/* =====================================
+   TOP 10 LIST COLOR LOGIC (NO INLINE CSS!)
+   ===================================== */
+
+/* Top 4 favorite places */
+.top-10-list li:nth-child(-n + 4) {
+    color: rgb(9, 105, 9);
+    font-weight: bold;
 }
 
-li strong {
-    background: white;
+/* Middle-ranked places */
+.top-10-list li:nth-child(n + 5):nth-child(-n + 8) {
+    color: rgb(209, 112, 9);
 }
 
+/* Bottom-ranked places */
+.top-10-list li:nth-child(n + 9) {
+    color: red;
+}
 
+/* =====================================
+   LINKS SECTION (GRID + BUTTON STYLE)
+   ===================================== */
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    text-align: center;
+}
+
+/* Styled links look like buttons */
+.links a {
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.links a:hover {
+    background-color: deepskyblue;
+}
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN (TABLET & UP)
+   ===================================== */
+
+/*
+   On wider screens:
+   - Increase spacing
+   - Slightly widen content
+*/
+@media (min-width: 768px) {
+    main {
+        gap: 30px;
+    }
+
+    .container {
+        max-width: 700px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+}
 
 /* ol .top-10-list li:nth-child(1) {
     color: darkgreen;
@@ -77,7 +207,7 @@ li strong {
 .top-10-list li:nth-child(3),
 .top-10-list li:nth-child(4) {
   */
-}
+
 /* footer {
     padding: 0px;
 
